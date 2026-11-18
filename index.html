@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anjali Kumari - Web Developer Portfolio</title>
+    <title>Anjali Kumari — Web Developer Portfolio</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- FontAwesome 6 -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -17,127 +21,293 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Top Progress Scroll Bar -->
     <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+    <!-- Interactive Ambient Mouse Spotlight -->
+    <div class="mouse-spotlight" id="mouseSpotlight"></div>
+
+    <!-- Navigation Bar -->
     <header class="navbar">
-      <div class="logo">Anjali Kumari</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
+      <a href="#home" class="logo">Portfolio</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li>
-          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
-            <i class="fa-solid fa-sun"></i>
-          </button>
-        </li>
       </ul>
+
+      <div class="nav-actions">
+        <button
+          class="mobile-nav-toggle"
+          id="mobileNavToggle"
+          aria-label="Toggle Navigation Menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </header>
 
-    <section class="home" id="home">
-      <div class="home-content">
-
-        <!-- Badge -->
-        <div class="hero-badge">
-          <span class="wave">👋</span> Hi, I'm
-        </div>
-
-        <!-- Name -->
-        <h1 class="name-title">Anjali Kumari</h1>
-
-        <!-- Role -->
-        <p class="hero-role"><span class="hero-role-prefix">I'm a </span><span class="typed-role"></span></p>
-
-        <!-- Description -->
-        <p class="hero-desc">
-          I build modern, responsive and user-friendly web applications and love solving problems with code.
-        </p>
-
-        <!-- Social Links -->
-        <div class="home-sci">
-          <a href="https://github.com/Anjali266-kumari" title="GitHub" class="social-link" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/anjali-kumari-34635533a" title="LinkedIn" class="social-link" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="https://leetcode.com/u/Anjalikumari90/" title="LeetCode" class="social-link" target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-code"></i>
-          </a>
-        </div>
-
-        <!-- CTA Buttons -->
-        <div class="hero-btns">
-          <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="#" class="btn btn-outline" download>Download Resume <i class="fa-solid fa-download"></i></a>
-        </div>
-
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-header">
+        <div class="logo">Portfolio</div>
+        <button
+          class="drawer-close-btn"
+          id="drawerCloseBtn"
+          aria-label="Close Menu"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
       </div>
-      <div class="home-decoration"></div>
+      <ul class="drawer-links">
+        <li>
+          <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li>
+          <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+        </li>
+        <li>
+          <a href="#experience"
+            ><i class="fa-solid fa-briefcase"></i> Experience</a
+          >
+        </li>
+        <li>
+          <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
+        </li>
+        <li>
+          <a href="#projects"
+            ><i class="fa-solid fa-diagram-project"></i> Projects</a
+          >
+        </li>
+        <li>
+          <a href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <!-- Hero Section -->
+    <section class="home" id="home">
+      <div class="hero-ambient-glow glow-1"></div>
+      <div class="hero-ambient-glow glow-2"></div>
+
+      <div class="home-container">
+        <div class="home-content">
+          <!-- Name -->
+          <h1 class="name-title">Anjali Kumari</h1>
+
+          <!-- Role -->
+          <p class="hero-role">
+            <span class="hero-role-prefix">I am a </span>
+            <span class="typed-role"></span>
+          </p>
+
+          <!-- Description -->
+          <p class="hero-desc">
+            Computer Science undergraduate &amp; Software Engineer Intern with
+            hands-on experience building full-stack web applications,
+            high-performance backends, and responsive modern user experiences.
+          </p>
+
+          <!-- View Resume Button -->
+          <div class="resume-btn-wrapper">
+            <a
+              href="resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-resume"
+            >
+              <span>View Resume</span>
+              <i class="fa-solid fa-file-lines"></i>
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="home-sci">
+            <a
+              href="https://github.com/Anjali266-kumari"
+              title="GitHub Profile"
+              class="social-link github"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/anjali-kumari-34635533a"
+              title="LinkedIn Profile"
+              class="social-link linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://leetcode.com/u/Anjalikumari90/"
+              title="LeetCode Profile"
+              class="social-link leetcode"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-solid fa-code"></i>
+            </a>
+          </div>
+
+          <!-- Hero Metrics Bar -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">1+</span>
+              <span class="stat-label">Years Dev Experience</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">20+</span>
+              <span class="stat-label">Subjects Curated</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">MERN &amp; Java</span>
+              <span class="stat-label">Core Tech Stack</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-card-wrapper glass-card">
+            <div class="visual-card-header">
+              <span class="window-dot red"></span>
+              <span class="window-dot yellow"></span>
+              <span class="window-dot green"></span>
+              <span class="window-title">anjali_developer.config</span>
+            </div>
+            <div class="code-snippet-box">
+              <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"Anjali Kumari"</span>,
+  <span class="code-prop">role</span>: <span class="code-string">"Software Developer Intern"</span>,
+  <span class="code-prop">company</span>: <span class="code-string">"Beckkon Systems (IIT BHU)"</span>,
+  <span class="code-prop">skills</span>: [<span class="code-string">"React"</span>, <span class="code-string">"Node.js"</span>, <span class="code-string">"Java"</span>, <span class="code-string">"MongoDB"</span>],
+  <span class="code-prop">status</span>: <span class="code-string">"Building impactful web apps"</span>
+};</code></pre>
+            </div>
+            <div class="visual-card-footer">
+              <div class="tech-stack-chips">
+                <span
+                  ><i class="fa-brands fa-react" style="color: #61dafb"></i>
+                  React</span
+                >
+                <span
+                  ><i class="fa-brands fa-node-js" style="color: #68a063"></i>
+                  Node</span
+                >
+                <span
+                  ><i class="fa-brands fa-java" style="color: #f89820"></i>
+                  Java</span
+                >
+                <span
+                  ><i class="fa-solid fa-database" style="color: #47a248"></i>
+                  Mongo</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- About Section -->
     <section class="about" id="about">
       <div class="section-header">
+        <span class="section-tag">WHO I AM</span>
         <h2 class="heading">About <span>Me</span></h2>
         <div class="heading-line"></div>
       </div>
+
       <div class="about-container">
-        <div class="about-text-content">
-          <h3 class="about-subtitle">Aspiring Software Engineer</h3>
+        <div class="about-text-content glass-card">
+          <h3 class="about-subtitle">
+            Aspiring Software Engineer &amp; Full-Stack Developer
+          </h3>
           <p class="about-desc">
-            Computer Science undergraduate with hands-on experience as a Software Engineer Intern, contributing to full-stack web development and production-ready applications. Skilled in React.js, Node.js, Express.js, MongoDB, REST APIs, and modern web technologies, with experience building responsive user interfaces, integrating APIs, and developing interactive web features.
+            Computer Science undergraduate with hands-on experience as a
+            <strong>Software Engineer Intern</strong> at
+            <strong>Beckkon Systems Private Limited</strong> (incubated by IIT
+            BHU), contributing to production-ready web applications.
           </p>
           <p class="about-desc">
-            Currently strengthening skills in Java, Data Structures and Algorithms, and backend development while building practical projects.
+            Skilled in
+            <strong>React.js, Node.js, Express.js, MongoDB, REST APIs</strong>,
+            and modern web development, with a strong focus on responsive UIs,
+            seamless component architectures, and optimized backend logic.
+            Currently expanding expertise in Java DSA and scalable system
+            design.
           </p>
         </div>
 
         <div class="about-features-box">
-          <div class="about-feature-col">
+          <div class="about-feature-col glass-card">
             <div class="feature-icon-circle">
               <i class="fa-solid fa-code"></i>
             </div>
             <h4>Full-Stack Developer</h4>
-            <p>Skilled in building responsive and dynamic web applications.</p>
+            <p>
+              Building responsive, modern, dynamic web applications with MERN
+              stack.
+            </p>
           </div>
 
-          <div class="about-feature-col">
+          <div class="about-feature-col glass-card">
             <div class="feature-icon-circle">
-              <i class="fa-solid fa-laptop"></i>
+              <i class="fa-solid fa-laptop-code"></i>
             </div>
             <h4>Problem Solver</h4>
-            <p>I enjoy solving DSA problems and optimizing solutions.</p>
+            <p>
+              Adept at Data Structures &amp; Algorithms with Java, optimizing
+              code performance.
+            </p>
           </div>
 
-          <div class="about-feature-col">
+          <div class="about-feature-col glass-card">
             <div class="feature-icon-circle">
-              <i class="fa-solid fa-book-open"></i>
+              <i class="fa-solid fa-bolt"></i>
             </div>
-            <h4>Quick Learner</h4>
-            <p>Always curious to learn new technologies and improve.</p>
+            <h4>Production Mindset</h4>
+            <p>
+              Shipped live production code, carousel engines, &amp; dark/light
+              themes.
+            </p>
           </div>
 
-          <div class="about-feature-col">
+          <div class="about-feature-col glass-card">
             <div class="feature-icon-circle">
               <i class="fa-solid fa-rocket"></i>
             </div>
             <h4>Goal Oriented</h4>
-            <p>Focused on growth, consistency and building impactful projects.</p>
+            <p>
+              Passionate about continuous learning, clean architecture, and
+              building user value.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Experience Section -->
     <section class="experience" id="experience">
       <div class="section-header">
-        <h2 class="heading">Experience</h2>
+        <span class="section-tag">CAREER PATH</span>
+        <h2 class="heading">Work <span>Experience</span></h2>
         <div class="heading-line"></div>
         <p class="section-subtitle">
-          Here's a summary of my professional experience and the roles I've taken on so far.
+          Professional engineering experience shipping features to live
+          production systems.
         </p>
       </div>
 
@@ -146,17 +316,21 @@
 
         <div class="timeline-row">
           <div class="timeline-icon-box">
-            <i class="fa-solid fa-desktop"></i>
+            <i class="fa-solid fa-briefcase"></i>
           </div>
           <div class="timeline-node"></div>
 
-          <div class="experience-card">
+          <div class="experience-card glass-card">
             <div class="exp-card-header-wrapper">
               <div class="exp-card-title-info">
                 <h3>Software Engineer Intern</h3>
                 <h4>Beckkon Systems Private Limited</h4>
                 <p class="exp-location">
-                  <i class="fa-solid fa-wifi"></i> Remote &nbsp;·&nbsp; <span style="font-style:italic;opacity:0.8;">Startup incubated by IIT BHU</span>
+                  <i class="fa-solid fa-building"></i> Remote &nbsp;·&nbsp;
+                  <span class="incubation-pill"
+                    ><i class="fa-solid fa-award"></i> IIT BHU Incubated
+                    Startup</span
+                  >
                 </p>
               </div>
               <div class="exp-card-date-badge">
@@ -165,28 +339,53 @@
             </div>
 
             <ul class="exp-bullet-list">
-              <li>Contributed to full-stack development of <strong>Beckkon.com</strong> within a professional engineering team, shipping features to a live production site (startup incubated by IIT BHU).</li>
-              <li>Implemented a <strong>site-wide light/dark theme toggle</strong> for seamless mode switching.</li>
-              <li>Redesigned the homepage carousel with auto-rotation, hover-to-pause, manual controls, and dot indicators; added <strong>4 new showcase slides</strong>.</li>
-              <li>Fixed carousel height instability to eliminate layout shifts, and resolved UI overlap by conditionally hiding components on showcase slides.</li>
-              <li>Streamlined the dashboard layout and redesigned the Contact page for a cleaner, more responsive experience.</li>
-              <li>Built a <strong>reusable Framer Motion animation system</strong> covering stagger reveals, blur/slide transitions, spring-eased scaling, and ambient glow effects.</li>
+              <li>
+                Contributed to full-stack engineering of
+                <strong>Beckkon.com</strong>, delivering client-facing features
+                and UI components for a live production platform.
+              </li>
+              <li>
+                Engineered a
+                <strong>site-wide persistent light/dark theme toggle</strong>
+                ensuring smooth color transition across all pages.
+              </li>
+              <li>
+                Redesigned homepage interactive carousel with auto-rotation,
+                hover-pause, dot navigation, and added
+                <strong>4 new showcase slides</strong>.
+              </li>
+              <li>
+                Resolved layout shifts and height instability, conditionally
+                hiding elements to prevent component overlaps across showcase
+                slides.
+              </li>
+              <li>
+                Streamlined application dashboard UX and redesigned the Contact
+                page for enhanced user responsiveness.
+              </li>
+              <li>
+                Built a
+                <strong>reusable Framer Motion animation system</strong>
+                covering stagger reveals, spring easing, and ambient glow
+                micro-interactions.
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Skills Section -->
     <section class="skills" id="skills">
       <div class="section-header">
+        <span class="section-tag">TECH STACK</span>
         <h2 class="heading">My <span>Skills</span></h2>
         <div class="heading-line"></div>
       </div>
 
       <div class="skills-grid-container">
-
         <!-- 01 LANGUAGES -->
-        <div class="skill-category">
+        <div class="skill-category glass-card">
           <div class="skill-cat-header">
             <span class="skill-cat-num">01</span>
             <h3 class="skill-cat-title">Languages</h3>
@@ -194,26 +393,26 @@
           </div>
           <div class="skill-tiles-row">
             <div class="skill-tile">
-              <i class="fa-brands fa-java" style="color: #f89820;"></i>
+              <i class="fa-brands fa-java" style="color: #f89820"></i>
               <span>Java</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-brands fa-js" style="color: #f7df1e;"></i>
+              <i class="fa-brands fa-js" style="color: #f7df1e"></i>
               <span>JavaScript</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-brands fa-python" style="color: #3776ab;"></i>
+              <i class="fa-brands fa-python" style="color: #3776ab"></i>
               <span>Python</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-solid fa-c" style="color: #00599c;"></i>
+              <i class="fa-solid fa-c" style="color: #00599c"></i>
               <span>C</span>
             </div>
           </div>
         </div>
 
         <!-- 02 FRONTEND DEVELOPMENT -->
-        <div class="skill-category">
+        <div class="skill-category glass-card">
           <div class="skill-cat-header">
             <span class="skill-cat-num">02</span>
             <h3 class="skill-cat-title">Frontend Development</h3>
@@ -221,26 +420,26 @@
           </div>
           <div class="skill-tiles-row">
             <div class="skill-tile">
-              <i class="fa-brands fa-react" style="color: #61dafb;"></i>
+              <i class="fa-brands fa-react" style="color: #61dafb"></i>
               <span>React.js</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-brands fa-html5" style="color: #e34f26;"></i>
+              <i class="fa-brands fa-html5" style="color: #e34f26"></i>
               <span>HTML5</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-brands fa-css3-alt" style="color: #1572b6;"></i>
+              <i class="fa-brands fa-css3-alt" style="color: #1572b6"></i>
               <span>CSS3</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-brands fa-js" style="color: #f7df1e;"></i>
+              <i class="fa-brands fa-js" style="color: #f7df1e"></i>
               <span>JavaScript</span>
             </div>
           </div>
         </div>
 
         <!-- 03 BACKEND DEVELOPMENT -->
-        <div class="skill-category">
+        <div class="skill-category glass-card">
           <div class="skill-cat-header">
             <span class="skill-cat-num">03</span>
             <h3 class="skill-cat-title">Backend Development</h3>
@@ -248,178 +447,229 @@
           </div>
           <div class="skill-tiles-row">
             <div class="skill-tile">
-              <i class="fa-brands fa-node-js" style="color: #68a063;"></i>
+              <i class="fa-brands fa-node-js" style="color: #68a063"></i>
               <span>Node.js</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-solid fa-server" style="color: #a0a0a0;"></i>
+              <i class="fa-solid fa-server" style="color: #a0a0a0"></i>
               <span>Express.js</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-solid fa-network-wired" style="color: #00d2ff;"></i>
+              <i class="fa-solid fa-network-wired" style="color: #00d2ff"></i>
               <span>REST APIs</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-solid fa-file-arrow-up" style="color: #f59e0b;"></i>
+              <i class="fa-solid fa-file-arrow-up" style="color: #f59e0b"></i>
               <span>Multer</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-solid fa-circle-nodes" style="color: #e74c3c;"></i>
+              <i class="fa-solid fa-circle-nodes" style="color: #e74c3c"></i>
               <span>Mongoose</span>
             </div>
           </div>
         </div>
 
         <!-- 04 DATABASE -->
-        <div class="skill-category">
+        <div class="skill-category glass-card">
           <div class="skill-cat-header">
             <span class="skill-cat-num">04</span>
-            <h3 class="skill-cat-title">Database</h3>
+            <h3 class="skill-cat-title">Database &amp; Storage</h3>
             <div class="skill-cat-line"></div>
           </div>
           <div class="skill-tiles-row">
             <div class="skill-tile">
-              <i class="fa-solid fa-leaf" style="color: #47a248;"></i>
+              <i class="fa-solid fa-leaf" style="color: #47a248"></i>
               <span>MongoDB</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-solid fa-cloud" style="color: #13aa52;"></i>
+              <i class="fa-solid fa-cloud" style="color: #13aa52"></i>
               <span>Atlas</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-solid fa-database" style="color: #00758f;"></i>
+              <i class="fa-solid fa-database" style="color: #00758f"></i>
               <span>MySQL</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-solid fa-table" style="color: #e34c26;"></i>
+              <i class="fa-solid fa-table" style="color: #e34c26"></i>
               <span>SQL</span>
             </div>
           </div>
         </div>
 
         <!-- 05 TOOLS & TECHNOLOGIES -->
-        <div class="skill-category">
+        <div class="skill-category glass-card full-width-cat">
           <div class="skill-cat-header">
             <span class="skill-cat-num">05</span>
-            <h3 class="skill-cat-title">Tools &amp; Technologies</h3>
+            <h3 class="skill-cat-title">Tools &amp; Workflow</h3>
             <div class="skill-cat-line"></div>
           </div>
           <div class="skill-tiles-row">
             <div class="skill-tile">
-              <i class="fa-brands fa-github" style="color: #f05032;"></i>
+              <i class="fa-brands fa-github" style="color: #f05032"></i>
               <span>Git &amp; GitHub</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-solid fa-code" style="color: #007acc;"></i>
+              <i class="fa-solid fa-code" style="color: #007acc"></i>
               <span>VS Code</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-solid fa-paper-plane" style="color: #ff6c37;"></i>
+              <i class="fa-solid fa-paper-plane" style="color: #ff6c37"></i>
               <span>Postman</span>
             </div>
             <div class="skill-tile">
-              <i class="fa-solid fa-cube" style="color: #fe315d;"></i>
+              <i class="fa-solid fa-cube" style="color: #fe315d"></i>
               <span>IntelliJ</span>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
-
-
-
+    <!-- Projects Section -->
     <section class="projects" id="projects">
       <div class="section-header">
-        <h2 class="heading">My <span>Projects</span></h2>
+        <span class="section-tag">PORTFOLIO</span>
+        <h2 class="heading">Featured <span>Projects</span></h2>
         <div class="heading-line"></div>
-        <p class="section-subtitle">A collection of projects I've built, ranging from full-stack web apps to desktop applications.</p>
+        <p class="section-subtitle">
+          A curation of web applications and software projects I've built.
+        </p>
       </div>
 
-      <div class="experience-timeline-container">
-        <div class="timeline-line"></div>
-
-        <div class="timeline-row">
-          <div class="timeline-icon-box">
-            <i class="fa-solid fa-globe"></i>
-          </div>
-          <div class="timeline-node"></div>
-          <div class="experience-card">
-            <div class="exp-card-header-wrapper">
-              <div class="exp-card-title-info">
-                <h3>StudentTube Finder</h3>
-                <h4>Full-Stack Web Application</h4>
-              </div>
-              <div class="exp-card-date-badge">
-                <i class="fa-solid fa-code"></i> MERN Stack
-              </div>
+      <div class="projects-grid-container">
+        <!-- Project 1 -->
+        <div class="project-showcase-card glass-card">
+          <div class="project-card-header">
+            <div class="project-badge">
+              <i class="fa-solid fa-star"></i> Featured MERN App
             </div>
-            <ul class="exp-bullet-list">
-              <li>Engineered a full-stack academic platform curating <strong>20+ core subjects</strong> and <strong>50+ vetted YouTube channels</strong> across semesters 1–4 for engineering students.</li>
-              <li>Implemented subject-wise search, MongoDB filters, and PDF resource uploads for structured content discovery.</li>
+            <div class="project-icon-box">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+          </div>
+          <div class="project-card-content">
+            <h3 class="project-title">StudentTube Finder</h3>
+            <p class="project-tagline">
+              Academic video curation platform for computer science &amp;
+              engineering students.
+            </p>
+            <ul class="project-features-list">
+              <li>
+                <i class="fa-solid fa-check"></i> Curates
+                <strong>20+ core subjects</strong> &amp;
+                <strong>50+ vetted YouTube channels</strong> across semester
+                1–4.
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Subject-wise fast search,
+                dynamic MongoDB filters, and PDF study resource uploads.
+              </li>
             </ul>
-            <div class="project-tech" style="margin-top: 20px;">
+            <div class="project-tech-tags">
               <span>React.js</span>
               <span>Node.js</span>
               <span>MongoDB</span>
               <span>Express.js</span>
             </div>
+            <div class="project-actions">
+              <a
+                href="https://github.com/Anjali266-kumari/StudentTube"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-sm btn-outline"
+              >
+                <i class="fa-brands fa-github"></i> Repository
+              </a>
+              <a
+                href="https://student-tube.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-sm btn-primary"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="timeline-row">
-          <div class="timeline-icon-box">
-            <i class="fa-solid fa-landmark"></i>
-          </div>
-          <div class="timeline-node"></div>
-          <div class="experience-card">
-            <div class="exp-card-header-wrapper">
-              <div class="exp-card-title-info">
-                <h3>Bank Management System</h3>
-                <h4>Desktop Application</h4>
-              </div>
-              <div class="exp-card-date-badge">
-                <i class="fa-brands fa-java"></i> Java
-              </div>
+        <!-- Project 2 -->
+        <div class="project-showcase-card glass-card">
+          <div class="project-card-header">
+            <div class="project-badge badge-secondary">
+              <i class="fa-brands fa-java"></i> Java Application
             </div>
-            <ul class="exp-bullet-list">
-              <li>Developed a desktop application supporting <strong>account creation</strong>, deposits, withdrawals, and full transaction management.</li>
-              <li>Designed and built using <strong>Java OOP principles</strong> with a SQL-backed relational database for data persistence.</li>
+            <div class="project-icon-box">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+          </div>
+          <div class="project-card-content">
+            <h3 class="project-title">Bank Management System</h3>
+            <p class="project-tagline">
+              Desktop banking application with relational SQL database
+              persistence.
+            </p>
+            <ul class="project-features-list">
+              <li>
+                <i class="fa-solid fa-check"></i> Complete account registration,
+                deposit, withdrawal, and transaction statement management.
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Designed following strict
+                <strong>Java Object-Oriented Programming (OOP)</strong>
+                principles.
+              </li>
             </ul>
-            <div class="project-tech" style="margin-top: 20px;">
+            <div class="project-tech-tags">
               <span>Java</span>
               <span>OOP</span>
               <span>SQL</span>
               <span>IntelliJ</span>
             </div>
+            <div class="project-actions">
+              <a
+                href="https://github.com/Anjali266-kumari/Bank-Management-System-Java"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-sm btn-outline"
+              >
+                <i class="fa-brands fa-github"></i> Repository
+              </a>
+            </div>
           </div>
         </div>
-
       </div>
     </section>
 
-
-
+    <!-- Contact Section -->
     <section class="contact" id="contact">
       <div class="section-header">
+        <span class="section-tag">LET'S CONNECT</span>
         <h2 class="heading">Get In <span>Touch</span></h2>
         <div class="heading-line"></div>
-        <p class="section-subtitle">Have a question, a project in mind, or just want to say hi? Feel free to reach out anytime!</p>
+        <p class="section-subtitle">
+          Have a project, role, or collaboration in mind? I'd love to talk!
+        </p>
       </div>
 
       <div class="contact-wrapper">
         <div class="contact-left">
           <div class="contact-status-badge">
-            <span class="pulse-dot"></span> Available for Work &amp; Collaborations
+            <span class="pulse-dot"></span> Available for Work &amp;
+            Collaborations
           </div>
-          <h3 class="contact-tagline">Let's build something impactful together.</h3>
+          <h3 class="contact-tagline">
+            Let's build something impactful together.
+          </h3>
           <p class="contact-lead-desc">
-            I'm constantly looking for opportunities to collaborate on full-stack projects, solve challenging problems, and contribute to innovative engineering teams.
+            I'm actively seeking opportunities for software engineering roles,
+            full-stack web development, and innovative project collaborations.
           </p>
 
           <div class="contact-cards-stack">
-            <a href="mailto:anjalikumari25012@gmail.com" class="contact-card">
+            <a
+              href="mailto:anjalikumari25012@gmail.com"
+              class="contact-card glass-card"
+            >
               <div class="contact-card-icon">
                 <i class="fa-solid fa-envelope"></i>
               </div>
@@ -427,10 +677,12 @@
                 <span class="card-label">Email Me</span>
                 <strong>anjalikumari25012@gmail.com</strong>
               </div>
-              <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"></i>
+              <i
+                class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"
+              ></i>
             </a>
 
-            <a href="tel:+917903658469" class="contact-card">
+            <a href="tel:+917903658469" class="contact-card glass-card">
               <div class="contact-card-icon">
                 <i class="fa-solid fa-phone"></i>
               </div>
@@ -438,10 +690,12 @@
                 <span class="card-label">Call / WhatsApp</span>
                 <strong>+91 7903658469</strong>
               </div>
-              <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"></i>
+              <i
+                class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"
+              ></i>
             </a>
 
-            <div class="contact-card location-card">
+            <div class="contact-card location-card glass-card">
               <div class="contact-card-icon">
                 <i class="fa-solid fa-location-dot"></i>
               </div>
@@ -453,12 +707,12 @@
           </div>
         </div>
 
-        <div class="contact-form-card">
+        <div class="contact-form-card glass-card">
           <div class="form-header">
             <h3>Send a Message</h3>
             <p>I usually respond within 24 hours.</p>
           </div>
-          <form action="#" class="contact-form">
+          <form action="#" class="contact-form" id="contactForm">
             <div class="form-row">
               <div class="input-group">
                 <i class="fa-solid fa-user input-icon"></i>
@@ -481,9 +735,13 @@
             </div>
             <div class="input-group textarea-group">
               <i class="fa-solid fa-comment-dots input-icon"></i>
-              <textarea placeholder="Write your message here..." rows="5" required></textarea>
+              <textarea
+                placeholder="Write your message here..."
+                rows="5"
+                required
+              ></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-submit">
+            <button type="submit" class="btn btn-primary btn-submit btn-glow">
               <span>Send Message</span>
               <i class="fa-solid fa-paper-plane"></i>
             </button>
@@ -492,33 +750,50 @@
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
         <!-- Col 1: Brand & Bio -->
         <div class="footer-col footer-brand-col">
-          <div class="footer-logo">Anjali Kumari</div>
+          <div class="footer-logo">Portfolio</div>
           <p class="footer-tagline">
-            Designing and building modern, responsive full-stack web applications and solving problems with clean, efficient code.
+            Building modern, responsive, scalable web applications and solving
+            problems with clean software engineering practices.
           </p>
           <div class="footer-social-circles">
-            <a href="https://github.com/" title="GitHub" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/Anjali266-kumari"
+              title="GitHub"
+              class="social-link github"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="fa-brands fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/anjali-kumari-34635533a"
+              title="LinkedIn"
+              class="social-link linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a href="https://leetcode.com/" title="LeetCode" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://leetcode.com/u/Anjalikumari90/"
+              title="LeetCode"
+              class="social-link leetcode"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="fa-solid fa-code"></i>
-            </a>
-            <a href="mailto:anjalikumari25012@gmail.com" title="Email">
-              <i class="fa-solid fa-envelope"></i>
             </a>
           </div>
         </div>
 
         <!-- Col 2: Useful Links -->
         <div class="footer-col footer-links-col">
-          <h4 class="footer-title">Useful Links</h4>
+          <h4 class="footer-title">Navigation</h4>
           <ul class="footer-nav-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -531,7 +806,7 @@
 
         <!-- Col 3: Contact Us -->
         <div class="footer-col footer-contact-col">
-          <h4 class="footer-title">Contact Us</h4>
+          <h4 class="footer-title">Contact</h4>
           <ul class="footer-contact-list">
             <li>
               <i class="fa-solid fa-location-dot"></i>
@@ -543,20 +818,41 @@
             </li>
             <li>
               <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:anjalikumari25012@gmail.com">anjalikumari25012@gmail.com</a>
+              <a href="mailto:anjalikumari25012@gmail.com"
+                >anjalikumari25012@gmail.com</a
+              >
             </li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Anjali Kumari. All rights reserved.</p>
-        <a href="#home" class="scroll-top-btn" id="scrollTopBtn" title="Back to top" aria-label="Back to top">
+        <p>
+          &copy; 2026 Anjali Kumari. Crafted with passion &amp; modern
+          engineering.
+        </p>
+        <a
+          href="#home"
+          class="scroll-top-btn"
+          id="scrollTopBtn"
+          title="Back to top"
+          aria-label="Back to top"
+        >
           <i class="fa-solid fa-arrow-up"></i>
         </a>
       </div>
     </footer>
 
+    <!-- Interactive Toast Notification -->
+    <div id="toast" class="toast-notification">
+      <div class="toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+      <div class="toast-text">
+        <strong>Thank You!</strong>
+        <span id="toastMsg">Your message has been sent successfully.</span>
+      </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="index.js"></script>
   </body>

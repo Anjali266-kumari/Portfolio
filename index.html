@@ -237,7 +237,7 @@
           </h3>
           <p class="about-desc">
             Computer Science undergraduate with hands-on experience as a
-            <strong>Software Engineer Intern</strong> at
+            <strong>Software Developer Intern</strong> at
             <strong>Beckkon Systems Private Limited</strong> (incubated by IIT
             BHU), contributing to production-ready web applications.
           </p>
@@ -323,7 +323,7 @@
           <div class="experience-card glass-card">
             <div class="exp-card-header-wrapper">
               <div class="exp-card-title-info">
-                <h3>Software Engineer Intern</h3>
+                <h3>Software Developer Intern</h3>
                 <h4>Beckkon Systems Private Limited</h4>
                 <p class="exp-location">
                   <i class="fa-solid fa-building"></i> Remote &nbsp;·&nbsp;
@@ -375,152 +375,224 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-      <div class="section-header">
-        <span class="section-tag">TECH STACK</span>
-        <h2 class="heading">My <span>Skills</span></h2>
-        <div class="heading-line"></div>
-      </div>
+    <!-- Technical Skills  Section -->
+    <section class="skills-section" id="skills">
+      <div class="skills-container">
+        <!-- Section Header -->
+        <div class="skills-header">
+          <span class="skills-badge">TECHNICAL EXPERTISE</span>
+          <h2 class="skills-matrix-title">
+            Technical <span class="gradient-text">Skills </span>
+          </h2>
+          <p class="skills-subtitle">
+            Technologies, core programming languages, and server-side frameworks
+            structured across complementary domains.
+          </p>
+        </div>
 
-      <div class="skills-grid-container">
-        <!-- 01 LANGUAGES -->
-        <div class="skill-category glass-card">
-          <div class="skill-cat-header">
-            <span class="skill-cat-num">01</span>
-            <h3 class="skill-cat-title">Languages</h3>
-            <div class="skill-cat-line"></div>
+        <!-- Skills Matrix Grid -->
+        <div class="skills-matrix-grid" id="skillsGrid">
+          <!-- Card 1: Node.js & Express -->
+          <div class="matrix-card" data-category="backend">
+            <div class="card-top">
+              <span class="card-domain">BACK END</span>
+              <span class="status-dot"></span>
+            </div>
+            <h3 class="card-title">Node.js &amp; Express</h3>
+            <p class="card-role">Server-side JavaScript runtime</p>
+            <p class="card-desc">
+              Building REST APIs, middleware pipelines, asynchronous event
+              loops, and robust backend services.
+            </p>
           </div>
-          <div class="skill-tiles-row">
-            <div class="skill-tile">
-              <i class="fa-brands fa-java" style="color: #f89820"></i>
-              <span>Java</span>
+
+          <!-- Card 2: React.js -->
+          <div class="matrix-card" data-category="frontend">
+            <div class="card-top">
+              <span class="card-domain">FRONTEND</span>
+              <span class="status-dot"></span>
             </div>
-            <div class="skill-tile">
-              <i class="fa-brands fa-js" style="color: #f7df1e"></i>
-              <span>JavaScript</span>
+            <h3 class="card-title">React.js</h3>
+            <p class="card-role">Component-driven UI library</p>
+            <p class="card-desc">
+              Developing dynamic single-page applications, custom hooks,
+              reusable components, and responsive state flows.
+            </p>
+          </div>
+
+          <!-- Card 3: Java -->
+          <div class="matrix-card" data-category="languages">
+            <div class="card-top">
+              <span class="card-domain">LANGUAGES</span>
+              <span class="status-dot"></span>
             </div>
-            <div class="skill-tile">
-              <i class="fa-brands fa-python" style="color: #3776ab"></i>
-              <span>Python</span>
+            <h3 class="card-title">Java</h3>
+            <p class="card-role">Object-oriented programming</p>
+            <p class="card-desc">
+              Strong grasp of OOP principles, data structures, algorithms,
+              exception handling, and modular backend logic.
+            </p>
+          </div>
+
+          <!-- Card 4: JavaScript -->
+          <div class="matrix-card" data-category="languages frontend">
+            <div class="card-top">
+              <span class="card-domain">LANGUAGES</span>
+              <span class="status-dot"></span>
             </div>
-            <div class="skill-tile">
-              <i class="fa-solid fa-c" style="color: #00599c"></i>
-              <span>C</span>
+            <h3 class="card-title">JavaScript (ES6+)</h3>
+            <p class="card-role">Full-stack core language</p>
+            <p class="card-desc">
+              Modern ECMAScript features, async/await, closures, promises, DOM
+              manipulation, and interactive web scripting.
+            </p>
+          </div>
+
+          <!-- Card 5: Python -->
+          <div class="matrix-card" data-category="languages">
+            <div class="card-top">
+              <span class="card-domain">LANGUAGES</span>
+              <span class="status-dot"></span>
             </div>
+            <h3 class="card-title">Python</h3>
+            <p class="card-role">General purpose &amp; scripting</p>
+            <p class="card-desc">
+              Writing clean scripts, data manipulation, automation, and core
+              algorithmic problem-solving.
+            </p>
+          </div>
+
+          <!-- Card 6: REST API Architecture -->
+          <div class="matrix-card" data-category="backend">
+            <div class="card-top">
+              <span class="card-domain">BACK END</span>
+              <span class="status-dot"></span>
+            </div>
+            <h3 class="card-title">REST API Architecture</h3>
+            <p class="card-role">API design &amp; integration</p>
+            <p class="card-desc">
+              Designing REST endpoints, handling HTTP methods, status codes,
+              JSON payloads, and third-party integrations.
+            </p>
+          </div>
+
+          <!-- Card 7: MongoDB & Mongoose -->
+          <div class="matrix-card" data-category="database">
+            <div class="card-top">
+              <span class="card-domain">DATABASE</span>
+              <span class="status-dot"></span>
+            </div>
+            <h3 class="card-title">MongoDB &amp; Mongoose</h3>
+            <p class="card-role">NoSQL database for flexible data</p>
+            <p class="card-desc">
+              Designing document schemas, managing collections, querying data,
+              and integrating data modeling with Mongoose.
+            </p>
+          </div>
+
+          <!-- Card 8: SQL & Relational Queries -->
+          <div class="matrix-card" data-category="database">
+            <div class="card-top">
+              <span class="card-domain">DATABASE</span>
+              <span class="status-dot"></span>
+            </div>
+            <h3 class="card-title">MySQL &amp; Relational Queries</h3>
+            <p class="card-role">Querying and analyzing structured data</p>
+            <p class="card-desc">
+              Writing complex SQL queries with joins, foreign keys,
+              aggregations, indexing, and relational schema modeling.
+            </p>
+          </div>
+
+          <!-- Card 9: HTML5 & CSS3 -->
+          <div class="matrix-card" data-category="frontend">
+            <div class="card-top">
+              <span class="card-domain">FRONTEND</span>
+              <span class="status-dot"></span>
+            </div>
+            <h3 class="card-title">HTML5 &amp; CSS3</h3>
+            <p class="card-role">Semantic structure &amp; modern styling</p>
+            <p class="card-desc">
+              Responsive layouts with Flexbox and CSS Grid, clean semantic tags,
+              smooth keyframe animations, and cross-browser styling.
+            </p>
+          </div>
+
+          <!-- Card 10: Multer -->
+          <div class="matrix-card" data-category="backend">
+            <div class="card-top">
+              <span class="card-domain">BACK END</span>
+              <span class="status-dot"></span>
+            </div>
+            <h3 class="card-title">Multer &amp; File Handling</h3>
+            <p class="card-role">Multipart/form-data middleware</p>
+            <p class="card-desc">
+              Managing secure file uploads, media storage configurations, size
+              limits, and image pipeline processing.
+            </p>
+          </div>
+
+          <!-- Card 11: MongoDB Atlas -->
+          <div class="matrix-card" data-category="database">
+            <div class="card-top">
+              <span class="card-domain">DATABASE</span>
+              <span class="status-dot"></span>
+            </div>
+            <h3 class="card-title">MongoDB Atlas</h3>
+            <p class="card-role">Cloud database clustering</p>
+            <p class="card-desc">
+              Deploying managed cloud clusters, security whitelist rules,
+              performance monitoring, and real-time synchronization.
+            </p>
+          </div>
+
+          <!-- Card 12: C Language -->
+          <div class="matrix-card" data-category="languages">
+            <div class="card-top">
+              <span class="card-domain">LANGUAGES</span>
+              <span class="status-dot"></span>
+            </div>
+            <h3 class="card-title">C Language</h3>
+            <p class="card-role">Foundational procedural programming</p>
+            <p class="card-desc">
+              Pointers, memory management, low-level data structures, and core
+              systems architecture foundations.
+            </p>
+          </div>
+
+          <!-- Card 13: Git & GitHub -->
+          <div class="matrix-card" data-category="tools">
+            <div class="card-top">
+              <span class="card-domain">DEV TOOLS</span>
+              <span class="status-dot"></span>
+            </div>
+            <h3 class="card-title">Git &amp; GitHub</h3>
+            <p class="card-role">Version control and collaboration</p>
+            <p class="card-desc">
+              Managing repositories, branching workflows, pull requests, merge
+              conflict resolutions, and CI/CD project versions.
+            </p>
+          </div>
+
+          <!-- Card 14: Postman & API Testing -->
+          <div class="matrix-card" data-category="tools">
+            <div class="card-top">
+              <span class="card-domain">DEV TOOLS</span>
+              <span class="status-dot"></span>
+            </div>
+            <h3 class="card-title">Postman &amp; API Testing</h3>
+            <p class="card-role">API development, testing, and debugging</p>
+            <p class="card-desc">
+              Testing REST APIs, validating payload structures, checking
+              authentication headers, and debugging response statuses.
+            </p>
           </div>
         </div>
 
-        <!-- 02 FRONTEND DEVELOPMENT -->
-        <div class="skill-category glass-card">
-          <div class="skill-cat-header">
-            <span class="skill-cat-num">02</span>
-            <h3 class="skill-cat-title">Frontend Development</h3>
-            <div class="skill-cat-line"></div>
-          </div>
-          <div class="skill-tiles-row">
-            <div class="skill-tile">
-              <i class="fa-brands fa-react" style="color: #61dafb"></i>
-              <span>React.js</span>
-            </div>
-            <div class="skill-tile">
-              <i class="fa-brands fa-html5" style="color: #e34f26"></i>
-              <span>HTML5</span>
-            </div>
-            <div class="skill-tile">
-              <i class="fa-brands fa-css3-alt" style="color: #1572b6"></i>
-              <span>CSS3</span>
-            </div>
-            <div class="skill-tile">
-              <i class="fa-brands fa-js" style="color: #f7df1e"></i>
-              <span>JavaScript</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 03 BACKEND DEVELOPMENT -->
-        <div class="skill-category glass-card">
-          <div class="skill-cat-header">
-            <span class="skill-cat-num">03</span>
-            <h3 class="skill-cat-title">Backend Development</h3>
-            <div class="skill-cat-line"></div>
-          </div>
-          <div class="skill-tiles-row">
-            <div class="skill-tile">
-              <i class="fa-brands fa-node-js" style="color: #68a063"></i>
-              <span>Node.js</span>
-            </div>
-            <div class="skill-tile">
-              <i class="fa-solid fa-server" style="color: #a0a0a0"></i>
-              <span>Express.js</span>
-            </div>
-            <div class="skill-tile">
-              <i class="fa-solid fa-network-wired" style="color: #00d2ff"></i>
-              <span>REST APIs</span>
-            </div>
-            <div class="skill-tile">
-              <i class="fa-solid fa-file-arrow-up" style="color: #f59e0b"></i>
-              <span>Multer</span>
-            </div>
-            <div class="skill-tile">
-              <i class="fa-solid fa-circle-nodes" style="color: #e74c3c"></i>
-              <span>Mongoose</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 04 DATABASE -->
-        <div class="skill-category glass-card">
-          <div class="skill-cat-header">
-            <span class="skill-cat-num">04</span>
-            <h3 class="skill-cat-title">Database &amp; Storage</h3>
-            <div class="skill-cat-line"></div>
-          </div>
-          <div class="skill-tiles-row">
-            <div class="skill-tile">
-              <i class="fa-solid fa-leaf" style="color: #47a248"></i>
-              <span>MongoDB</span>
-            </div>
-            <div class="skill-tile">
-              <i class="fa-solid fa-cloud" style="color: #13aa52"></i>
-              <span>Atlas</span>
-            </div>
-            <div class="skill-tile">
-              <i class="fa-solid fa-database" style="color: #00758f"></i>
-              <span>MySQL</span>
-            </div>
-            <div class="skill-tile">
-              <i class="fa-solid fa-table" style="color: #e34c26"></i>
-              <span>SQL</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 05 TOOLS & TECHNOLOGIES -->
-        <div class="skill-category glass-card full-width-cat">
-          <div class="skill-cat-header">
-            <span class="skill-cat-num">05</span>
-            <h3 class="skill-cat-title">Tools &amp; Workflow</h3>
-            <div class="skill-cat-line"></div>
-          </div>
-          <div class="skill-tiles-row">
-            <div class="skill-tile">
-              <i class="fa-brands fa-github" style="color: #f05032"></i>
-              <span>Git &amp; GitHub</span>
-            </div>
-            <div class="skill-tile">
-              <i class="fa-solid fa-code" style="color: #007acc"></i>
-              <span>VS Code</span>
-            </div>
-            <div class="skill-tile">
-              <i class="fa-solid fa-paper-plane" style="color: #ff6c37"></i>
-              <span>Postman</span>
-            </div>
-            <div class="skill-tile">
-              <i class="fa-solid fa-cube" style="color: #fe315d"></i>
-              <span>IntelliJ</span>
-            </div>
-          </div>
+        <!-- Bottom Counter Badge -->
+        <div class="skills-footer-counter">
+          <span class="counter-dot"></span>
+          <span id="activeSkillsCount">14 SKILLS</span>
         </div>
       </div>
     </section>

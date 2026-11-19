@@ -1,10 +1,7 @@
 // Typewriter animation for hero role
 if (document.querySelector(".typed-role")) {
   new Typed(".typed-role", {
-    strings: [
-      "Full Stack Developer",
-      "Problem Solver",
-    ],
+    strings: ["Full Stack Developer", "Backend Engineer"],
     typeSpeed: 60,
     backSpeed: 35,
     backDelay: 1800,
@@ -137,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       threshold: 0.08,
       rootMargin: "0px 0px -40px 0px",
-    }
+    },
   );
 
   document.querySelectorAll(".motion-reveal").forEach((el) => {
@@ -195,5 +192,3 @@ if (contactForm) {
 // Reset any saved light-mode theme
 localStorage.removeItem("theme");
 document.body.classList.remove("light-mode");
-
-
